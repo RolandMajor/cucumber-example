@@ -45,17 +45,17 @@ public class StepDefinitions {
         homePage.clickSignInLink();
     }
 
-    @Given("the Sign In button is clicked")
+    @When("the Sign In button is clicked")
     public void theSignInButtonIsClicked() {
         homePage.clickSignInButton();
     }
 
-    @Given("The {string} is filled with {string}")
+    @Given("the {string} is filled with {string}")
     public void theFieldIsFilledWithParameter(String field, String parameter) {
         homePage.fillField(field, parameter);
     }
 
-    @Then("The {string} error message is shown")
+    @Then("the {string} error message is shown")
     public void theMsgErrorMessageIsShown(String msg) {
         Optional<String> errorMessage = homePage.getErrorMessage();
         if (errorMessage.isPresent()) {
@@ -64,4 +64,5 @@ public class StepDefinitions {
             fail();
         }
     }
+
 }
