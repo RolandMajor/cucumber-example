@@ -29,8 +29,8 @@ public class StepDefinitions {
     static {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.setHeadless(true);
-        options.addArguments("--no-sandbox");
+        //options.setHeadless(true);
+        //options.addArguments("--no-sandbox");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(WAIT_TIME, TimeUnit.SECONDS);
     }
